@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // =======================================
 // FUNGSI ACCORDION FAQ
 // =======================================
 document.addEventListener('DOMContentLoaded', function() {
@@ -142,7 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // ... (kode JS lainnya di sini) ...
 });
 
-// =======================================
     // FUNGSI SCROLL NAVIGASI STAF DI SUBPAGE
     // =======================================
     const staffWrapper = document.querySelector('.staff-scroll-wrapper');
