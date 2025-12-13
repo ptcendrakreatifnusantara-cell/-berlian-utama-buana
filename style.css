@@ -1,0 +1,2125 @@
+
+/* 1. VARIABEL */
+
+:root {
+    --primary-color: #C79F3F; /* Emas */
+    --secondary-color: #1C1C1C; /* Hitam/Abu-abu Gelap */
+    --text-color: #333;
+    --light-bg: #F8F8F8;
+    --white-bg: #FFFFFF;
+    --dark-bg: #1C1C1C;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.4;
+    color: var(--text-color);
+    background-color: var(--white-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* 2. TYPOGRAPHY & GLOBAL LAYOUT           */
+h2.section-title {
+    font-family: var(--heading-font);
+    font-size: 2.5em;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+p.subtitle {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.mt-30 { margin-top: 30px; }
+.mt-50 { margin-top: 50px; }
+
+.section-padding {
+    padding: 30px 0;
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+/* 3. HEADER & NAVIGATION                  */
+.main-header {
+    background-color: var(--white-bg);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.hamburger-menu {
+    display: none; /* Default: Hidden on Desktop */
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* ======================================= */
+/* 4. BUTTONS STYLING                      */
+/* ======================================= */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-bg);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-large {
+    padding: 15px 35px;
+    font-size: 1.1em;
+}
+
+.btn-contact-nav {
+    background-color: var(--primary-color);
+    color: var(--white-bg) !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+/* ======================================= */
+/* 5. HERO SECTION                         */
+/* ======================================= */
+.hero-section {
+    position: relative;
+    height: 90vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('debtlaw.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white-bg);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.hero-title {
+    font-family: var(--heading-font);
+    font-size: 4.5em;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    font-size: 1.8em;
+    margin-bottom: 40px;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.hero-buttons .btn {
+    margin: 0; 
+    min-width: 240px; 
+    font-size: 1.1em;
+}
+
+
+@media (max-width: 768px) {}
+
+    .hero-buttons {
+        /* Ubah orientasi menjadi kolom di mobile */
+        flex-direction: column; 
+        gap: 15px; 
+        align-items: center; 
+        width: 100%; 
+    }
+    
+    .hero-buttons .btn {
+        width: 80%; /* Tombol mengambil 80% lebar di mobile */
+        max-width: 300px; /* Batasan agar tidak terlalu lebar di tablet */
+    }
+
+
+/* 6. ABOUT SECTION                        */
+.about-grid {
+    display: flex;
+    align-items: center;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose-us ul {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.why-choose-us li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start; 
+}
+
+.primary-icon {
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 1.2em;
+    padding-top: 3px;
+}
+
+/* 14. PARTNER LOGO SCROLL SECTION */
+
+.logo-scroll-container {
+    overflow: hidden; /* Sembunyikan semua yang keluar dari batas */
+    white-space: nowrap; /* Pastikan semua logo berada dalam satu baris */
+    padding: 10px 0;
+    margin-top: 30px;
+}
+
+.logo-row {
+    display: flex;
+    width: 200%; /* Lebar dua kali lipat agar gulir tampak tak terbatas */
+    margin: 20px 0; /* Jarak antar baris */
+    animation-timing-function: linear; /* Kecepatan konstan */
+    animation-iteration-count: infinite; /* Ulangi terus menerus */
+}
+
+.logo-row img {
+    /* Pengaturan Ukuran Logo */
+    width: auto;
+    height: 60px; /* Tinggi logo yang seragam di desktop */
+    max-width: none; /* Batalkan batas max-width */
+    margin: 0 40px; /* Jarak antar logo yang cukup */
+    opacity: 0.6;
+    transition: opacity 0.3s, filter 0.3s;
+}
+
+.logo-row img:hover {
+    opacity: 1;
+    filter: grayscale(0%); /* Logo berwarna saat di-hover */
+}
+
+/* KEYFRAMES ANIMATION (GULIR)             */
+
+/* Gulir ke Kiri (Baris 2 & 4) */
+@keyframes scrollLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Gulir sejauh 50% dari 200% width */
+}
+
+/* Gulir ke Kanan (Baris 1 & 3) */
+@keyframes scrollRight {
+    from { transform: translateX(-50%); } /* Mulai dari posisi akhir */
+    to { transform: translateX(0); } /* Gulir ke posisi awal */
+}
+
+/* Penerapan Animasi */
+.scroll-left {
+    animation-name: scrollLeft;
+    animation-duration: 40s; /* Durasi gulir 40 detik */
+}
+
+.scroll-right {
+    animation-name: scrollRight;
+    animation-duration: 40s;
+}
+
+/* RESPONSIVE DESIGN UNTUK LOGO            */
+
+@media (max-width: 1024px) {
+    .logo-row img {
+        height: 50px; /* Tinggi sedikit dikurangi di tablet */
+        margin: 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-row img {
+        height: 40px; /* Tinggi dikurangi di mobile */
+        margin: 0 20px;
+    }
+    
+    /* Percepat animasi di Mobile agar logo tidak terlalu lama terlihat */
+    .scroll-left, .scroll-right {
+        animation-duration: 30s; 
+    }
+}
+
+/* 8. SERVICES (SPESIALISASI) SECTION */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--white-bg);
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border-top: 3px solid transparent; 
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-top-color: var(--primary-color);
+}
+
+.service-icon {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-family: var(--heading-font);
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-bg);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* ======================================= */
+/* 9. WHY CHOOSE US (BENEFIT) SECTION      */
+/* ======================================= */
+.benefit-grid {
+    /* DEFAULT UNTUK DESKTOP (> 1200px): 4 KOLOM */
+    display: grid;
+    /* Setiap kolom akan memiliki lebar minimal 250px. 
+       Ini akan memastikan 4 kolom dapat dimuat di desktop/layar lebar. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px 30px; 
+    margin-top: 50px;
+}
+
+.benefit-card {
+    /* Menggunakan FLEX pada kartu untuk memastikan IKON dan TEKS sejajar rapi */
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+    padding: 25px; 
+    background-color: var(--white-bg); 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease;
+    height: 100%; /* Memastikan semua kartu memiliki tinggi yang sama di dalam grid */
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    font-size: 2em;
+    flex-shrink: 0;
+    color: var(--primary-color); 
+}
+
+.benefit-content h3 {
+    font-family: var(--heading-font);
+    font-size: 1.3em; 
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.benefit-content p {
+    font-size: 1em; 
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ======================================= */
+/* MEDIA QUERIES UNTUK LAYAR MOBILE/SEMPIT */
+/* ======================================= */
+
+/* MOBILE / TABLET SEMPIT (Max 850px) */
+@media (max-width: 850px) {
+    .benefit-grid {
+        /* PENTING: Mengubah lebar minimum menjadi 380px.
+           Karena layar tidak cukup lebar untuk menampung dua kolom @380px,
+           grid akan OTOMATIS menjadi 2 kolom. */
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        gap: 30px 15px; 
+    }
+}
+
+/* MOBILE SANGAT SEMPIT (Max 480px) */
+@media (max-width: 480px) {
+    .benefit-grid {
+        /* Untuk layar yang sangat sempit, kita kembali ke 1 kolom agar teks tidak terpotong */
+        grid-template-columns: 1fr;
+    }
+    .benefit-card {
+        padding: 15px;
+        flex-direction: column; /* Ikon di atas, teks di bawah (alternatif) */
+        text-align: center;
+        align-items: center;
+    }
+}
+
+
+
+
+
+/* ======================================= */
+/* TESTIMONIALS / GOOGLE REVIEW SECTION    */
+/* ======================================= */
+
+.reviews-section {
+    background-color: var(--light-bg); /* Gunakan latar belakang ringan */
+    padding: 40px 0;
+}
+
+.reviews-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* 2.1. Kolom Kiri: Rating Summary (EXCELLENT) */
+.rating-summary {
+    flex-basis: 300px; /* Ukuran tetap di desktop */
+    text-align: left;
+    padding-right: 20px;
+}
+
+.rating-title {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.stars-icon {
+    color: #ffd200db; /* Warna bintang (misalnya Gold/Emas) */
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+.review-count {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+.google-logo {
+    width: 120px;
+    height: auto;
+}
+
+
+/* 2.2. Kolom Kanan: Review Carousel */
+.review-carousel-container {
+    flex-grow: 1; /* Mengisi sisa ruang */
+    position: relative;
+    overflow: hidden; /* Penting untuk menyembunyikan review di luar viewport */
+    padding: 20px 0; /* Padding vertikal untuk menampung bayangan */
+}
+
+.review-carousel {
+    display: flex;
+    /* Aktifkan horizontal scroll untuk mobile */
+    overflow-x: scroll; 
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px; /* Jarak antar kartu */
+    padding-bottom: 10px; /* Ruang untuk scrollbar (opsional) */
+}
+
+.review-card {
+    background-color: var(--white-bg);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    min-width: 320px; /* Ukuran standar kartu di desktop */
+    max-width: 320px;
+    height: auto;
+    flex-shrink: 0; /* Penting: mencegah kartu menyusut */
+}
+
+/* Review Card Header Styling */
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.reviewer-name {
+    font-weight: 700;
+    font-size: 0.95em;
+    color: var(--text-color);
+}
+.review-date {
+    font-size: 0.8em;
+    color: #999;
+}
+.google-icon {
+    font-size: 1.2em;
+    color: #4285F4; /* Warna biru Google */
+    margin-left: auto;
+}
+
+/* Review Rating Styling */
+.review-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stars-card {
+    color: #ffd200db; /* Bintang Emas/Aksen */
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.verified-icon {
+    color: #4285F4; /* Warna biru Google */
+    font-size: 1em;
+}
+
+.review-text {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+}
+.read-more {
+    color: #4285F4;
+    cursor: pointer;
+}
+
+/* Navigasi Panah */
+.nav-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--white-bg);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    color: var(--text-color);
+    display: none; /* Disembunyikan secara default, hanya tampil di desktop */
+}
+
+/* Tampilkan Panah Navigasi di Desktop */
+@media (min-width: 769px) {
+    .nav-button {
+        display: block;
+    }
+}
+
+/* ======================================= */
+/* 11. FOOTER                              */
+/* ======================================= */
+.main-footer {
+    background-color: var(--dark-bg);
+    color: var(--white-bg);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+/* ======================================= */
+/* RESPONSIVE (MOBILE)                     */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    .reviews-content {
+        flex-direction: column; /* Ubah ke tumpukan vertikal di mobile */
+        gap: 20px;
+    }
+    
+    /* Rating Summary (Kolom Kiri) menjadi Penuh Lebar */
+    .rating-summary {
+        flex-basis: auto;
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+    
+    .rating-title {
+        font-size: 2em; /* Lebih kecil di mobile */
+    }
+    .stars-icon {
+        font-size: 1.5em;
+    }
+    
+    /* Review Carousel (Kolom Kanan) */
+    .review-carousel-container {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .review-carousel {
+        /* Memastikan review menempati 85% lebar layar mobile */
+        gap: 15px; 
+        padding: 10px 0;
+        /* Hapus scrollbar di mobile */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .review-carousel::-webkit-scrollbar {
+        display: none; /* Chrome, Safari and Opera */
+    }
+    
+    .review-card {
+        min-width: 85vw; /* Kartu mengambil 85% dari viewport width */
+        max-width: 85vw;
+        margin-left: 20px; /* Jarak untuk review pertama */
+    }
+    /* Pastikan review terakhir memiliki ruang di kanan */
+    .review-card:last-child {
+        margin-right: 20px;
+    }
+    
+    /* Navigasi Panah disembunyikan di mobile (digantikan auto-scroll) */
+    .nav-button {
+        display: none;
+    }
+}
+
+/* 13. RESPONSIVE DESIGN (Media Queries) */
+
+/* Tablet (Max 1024px) */
+@media (max-width: 1024px) {
+.services-cards-grid, .services-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.team-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.hero-title {
+font-size: 3.5em;
+}
+
+.intro-text-service {
+max-width: 100%;
+}
+
+}
+/* 13. RESPONSIVE DESIGN (Media Queries)   */
+
+/* Tablet (Max 1024px) */
+@media (max-width: 1024px) {
+    .services-cards-grid, .services-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .hero-title {
+        font-size: 3.5em;
+    }
+    .intro-text-service {
+        max-width: 100%;
+    }
+}
+
+/* Mobile (Max 768px) */
+@media (max-width: 768px) {
+    /* Header & Nav */
+    .main-nav {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        background-color: var(--white-bg);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .main-nav li {
+        text-align: center;
+    }
+
+    .main-nav a {
+        padding: 15px 0;
+        display: block;
+        font-size: 1.1em;
+        border-bottom: 1px solid #eee;
+    }
+
+    .main-nav li:last-child a {
+        border-bottom: none;
+    }
+
+    .btn-contact-nav {
+        margin: 15px auto;
+        display: table;
+    }
+
+    .hamburger-menu {
+        display: block; 
+    }
+
+    /* Hero */
+    .hero-section {
+        height: 70vh;
+    }
+    .hero-title {
+        font-size: 2.5em;
+    }
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero-buttons .btn {
+        margin: 0;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    /* About */
+    .about-grid {
+        flex-direction: column; 
+    }
+    .about-image {
+        order: -1; 
+        margin-bottom: 30px;
+    }
+
+    /* Services, Cards, Team */
+    .services-cards-grid, .services-grid, .team-grid, .benefit-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    /* Why Choose Us (Original Logic for 4 columns in tablet) */
+    .benefit-grid {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 35px 15px; 
+    }
+    .benefit-icon {
+        font-size: 2em; 
+    }
+    .benefit-content h3 {
+        font-size: 1em; 
+    }
+    .benefit-content p {
+        font-size: 0.6em; 
+    }
+
+
+}
+
+/* Mobile Portrait (Max 576px) */
+@media (max-width: 576px) {
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 15px;
+    }
+    .benefit-icon {
+        font-size: 2.2em;
+    }
+    .benefit-content h3 {
+        font-size: 1.1em;
+    }
+}
+
+
+/* Mobile Kecil (Max 480px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.6em;
+    }
+    .section-padding {
+        padding: 15px 0;
+    }
+    h2.section-title {
+        font-size: 1.6em;
+    }
+}
+/* ======================================= */
+/* 11. FOOTER - REVISI 3 KOLOM RATA KIRI   */
+/* ======================================= */
+.main-footer {
+    background-color: var(--dark-bg); 
+    color: var(--white-bg); 
+    padding-top: 50px; 
+    padding-bottom: 0;
+}
+
+.footer-grid {
+    display: grid;
+    /* Desktop: 3 Kolom Rata Kiri */
+    grid-template-columns: 1fr 1fr 1.5fr; 
+    gap: 40px;
+    padding-bottom: 5px;
+    text-align: left; /* PENTING: Pastikan semua teks di dalam grid rata kiri */
+}
+
+.footer-heading {
+    font-family: var(--heading-font);
+    font-size: 1.4em;
+    color: var(--primary-color); 
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li a {
+    color: #ccc; 
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--primary-color); 
+}
+
+/* Styling Kontak dan Alamat */
+.footer-col p {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+.footer-icon {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.1em;
+    width: 20px; 
+    text-align: center; /* Untuk penataan ikon yang rata */
+}
+
+/* Social Links Styling */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: var(--white-bg);
+    font-size: 1.2em;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Copyright Section */
+.footer-copyright {
+    text-align: center;
+    background-color: #111; 
+    padding: 20px 0;
+}
+
+.footer-copyright hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+.footer-copyright p {
+    font-size: 0.85em;
+    color: #aaa;
+    margin: 0;
+}
+
+/* ======================================= */
+/* RESPONSIVE FOOTER (TATA LETAK RAPIH)    */
+/* ======================================= */
+@media (max-width: 992px) {
+    /* Tablet: Ubah dari 3 kolom ke 2 kolom (atau 1 kolom untuk yang terpanjang) */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .address-info {
+        grid-column: 1 / -1; /* Kolom Alamat mengambil seluruh lebar di bawah 2 kolom pertama */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        /* Mobile: Tumpuk menjadi 1 kolom vertikal */
+        grid-template-columns: fr;
+        gap: 20px;
+    }
+
+    .address-info {
+        grid-column: auto; /* Kembalikan ke penataan normal */
+    }
+    
+    .footer-heading {
+        margin-top: 10px;
+    }
+    
+}
+/* 9. GOOGLE MAPS & CONTACT CTA */
+.maps-container {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+}
+.contact-info p {
+    
+    margin: 5px 0;
+    
+}
+/* ======================================= */
+/* 1. WHATSAPP FLOAT BUTTON & BUBBLE (REVISI FINAL) */
+/* ======================================= */
+
+/* Kontainer utama: Menggunakan Flex untuk menata bubble dan ikon */
+.whatsapp-float-wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1001;
+    text-decoration: none; 
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float-wrapper:hover .whatsapp-icon-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling Ikon WhatsApp */
+.whatsapp-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    font-size: 30px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    order: 2; /* Ikon berada di kanan (urutan kedua) */
+}
+
+/* Styling untuk Bubble Text */
+.whatsapp-bubble {
+    background-color: var(--primary-color); 
+    color: var(--white-bg);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1em; /* Ukuran default di desktop */
+    font-weight: 600;
+    margin-right: 15px; /* Jarak antara teks dan ikon */
+    white-space: nowrap; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    order: 1; /* Bubble berada di kiri (urutan pertama) */
+}
+
+/* ======================================= */
+/* 2. RESPONSIF WHATSAPP FLOAT (BUBBLE SELALU TAMPIL) */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    .whatsapp-float-wrapper {
+        bottom: 15px; /* Posisikan lebih rendah di mobile */
+        right: 15px;
+    }
+    
+    .whatsapp-icon-wrapper {
+        width: 45px; /* Ikon lebih kecil di mobile */
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .whatsapp-bubble {
+        /* PENTING: Mengurangi ukuran font dan padding di mobile agar tidak memakan banyak ruang */
+        font-size: 0.85em; 
+        padding: 8px 12px;
+        margin-right: 10px;
+        /* TETAPKAN DISPLAY: BLOCK/FLEX agar bubble selalu muncul */
+        display: block; 
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float-wrapper {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .whatsapp-icon-wrapper {
+        width: 40px; /* Ikon terkecil */
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .whatsapp-bubble {
+        font-size: 0.8em; /* Ukuran font terkecil */
+        padding: 6px 10px;
+    }
+}
+/* ======================================= */
+/* 14. LAYOUT UNTUK SUBPAGE (informasi-lengkap.html) */
+/* ======================================= */
+
+.subpage-hero {
+    padding-top: 10px; /* Jarak dari header sticky */
+    padding-bottom: 10px;
+}
+
+/* Garis pemisah antar section (opsional, untuk mempertegas pemisahan) */
+.subpage-hero + hr, 
+#faq + hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+
+/* ======================================= */
+/* 15. CASE STUDY SECTION (ELEGANT GRID)   */
+/* ======================================= */
+.case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.case-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--white-bg);
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.case-card h3 {
+    font-family: var(--heading-font);
+    font-size: 1.5em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.detail-group {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.detail-label {
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.text-success {
+    color: #28a745; /* Warna hijau untuk hasil sukses */
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+/* ======================================= */
+/* 16. FAQ SECTION (ACCORDION)             */
+/* ======================================= */
+.faq-container {
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.faq-item {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: var(--white-bg);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 20px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--secondary-color);
+    background-color: var(--white-bg);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.faq-item.active .faq-question {
+    background-color: #f0f0f0;
+    color: var(--primary-color);
+}
+
+.faq-question i {
+    transition: transform 0.3s;
+    color: var(--primary-color);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    padding: 0 25px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px; /* Cukup besar untuk menampung jawaban */
+    border-top: 1px solid #f0f0f0;
+}
+
+.faq-answer p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ======================================= */
+/* 17. AFFILIATIONS/SERTIFIKASI SECTION    */
+/* ======================================= */
+.affiliations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.affiliation-card {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background-color: var(--white-bg);
+    transition: all 0.3s;
+}
+
+.affiliation-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.affiliation-icon {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.affiliation-card h3 {
+    font-family: var(--heading-font);
+    font-size: 1.3em;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+
+/* RESPONSIF UNTUK HALAMAN BARU */
+@media (max-width: 992px) {
+    .case-study-grid {
+        grid-template-columns: 1fr; /* Tumpuk di tablet */
+    }
+    .affiliations-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Kolom di tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .affiliations-grid {
+        grid-template-columns: 1fr; /* 1 Kolom di mobile */
+    }
+    .faq-question {
+        font-size: 1em;
+        padding: 15px 20px;
+    }
+}
+/* ======================================= */
+/* 6. COMPANY PROFILE SECTION              */
+/* ======================================= */
+#company-profile .section-title {
+    margin-bottom: 10px;
+}
+
+#company-profile .subtitle {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.profile-intro {
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    color: #444;
+    text-align: justify;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-intro p strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.profile-grid h3 {
+    font-family: var(--heading-font);
+    font-size: 1.8em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    display: inline-block; /* Agar border bawah hanya sepanjang teks */
+}
+
+.profile-grid p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.profile-vision-mission ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.profile-vision-mission ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    color: #444;
+}
+
+.profile-list-icon {
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 1.3em;
+    flex-shrink: 0;
+    padding-top: 2px;
+}
+
+/* Spesialisasi Section */
+.profile-specialization {
+    margin-top: 50px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.profile-specialization h3 {
+    font-family: var(--heading-font);
+    font-size: 2em;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.specialization-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.spec-card {
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%; /* Memastikan tinggi kartu seragam */
+}
+
+.spec-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.spec-icon {
+    font-size: 1em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.spec-card h4 {
+    font-family: var(--heading-font);
+    font-size: 1.4em;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.spec-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.spec-card ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.spec-card ul li::before {
+    content: "\f058"; /* Font Awesome check-circle */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 0.9em;
+}
+
+/* ======================================= */
+/* 7. RESPONSIF COMPANY PROFILE            */
+/* ======================================= */
+@media (max-width: 992px) {
+    .profile-grid {
+        grid-template-columns: 1fr; /* Tumpuk visi/misi dan filosofi di tablet */
+        gap: 40px;
+    }
+    .profile-grid h3 {
+        text-align: center;
+        display: block; /* Agar border bawah penuh lebar di mobile */
+    }
+    .profile-vision-mission ul {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-intro,
+    .profile-specialization h3 {
+        padding: 0 10px; /* Sedikit padding di mobile */
+    }
+    .profile-grid h3 {
+        font-size: 1.6em;
+    }
+    .profile-vision-mission ul li {
+        font-size: 1em;
+    }
+    .spec-card h4 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {}
+    .profile-intro {
+        font-size: 0.95em;
+    }
+    .profile-grid {
+        gap: 30px;
+    }
+    .profile-grid h3 {
+        font-size: 1.4em;
+    }
+    .profile-list-icon {
+        font-size: 1.1em;
+        .spec-card {
+        padding: 20px;
+    }
+    .spec-icon {
+        font-size: 2.5em;
+    }
+}
+/* KEYFRAMES UNTUK GULIR TEAM TIADA BATAS */
+@keyframes scrollTeam {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Gulir sejauh 50% dari 200% width */
+}
+/* ======================================= */
+/* 10. TEAM SECTION (REVISI: HORIZONTAL SCROLL) */
+/* ======================================= */
+
+/* Kontainer yang menyembunyikan konten di luar batas */
+.team-scroll-container {
+    overflow: hidden; 
+    padding: 20px 0;
+}
+
+/* Wrapper yang menampung 2 set card (untuk looping) */
+.team-scroll-wrapper {
+    display: flex;
+    width: 200%; /* Dua kali lebar untuk looping */
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+}
+
+/* Penerapan Animasi */
+.scroll-left-team {
+    animation-name: scrollTeam;
+    animation-duration: 40s; /* Kecepatan gulir (sesuaikan jika terlalu cepat/lambat) */
+}
+
+/* Mengatur tata letak setiap baris/kelompok card */
+.team-grid.team-row {
+    display: flex; /* Gunakan flex untuk menata card secara horizontal */
+    flex-shrink: 0; /* Penting: mencegah baris menyusut */
+    gap: 30px; /* Jarak antar card */
+    padding: 0 15px;
+    width: 50%; /* Setiap kelompok mengambil 50% dari 200% wrapper */
+}
+
+/* Styling Card Anggota Tim */
+.team-member-card {
+    background-color: var(--white-bg);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding-bottom: 20px;
+    overflow: hidden;
+    
+    /* PENTING: Tentukan lebar kartu agar terlihat rapi */
+    min-width: 280px; 
+    max-width: 280px;
+    flex-shrink: 0; /* Pastikan card tidak menyusut saat di-scroll */
+}
+
+.team-member-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.team-photo {
+    width: 100%; /* Mengisi lebar card */
+    height: 280px; /* Tinggi yang lebih konsisten */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member-card h3 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.team-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.team-specialty {
+    font-size: 0.85em;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.team-bio {
+    padding: 0 15px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+
+/* ======================================= */
+/* 11. RESPONSIF TEAM SECTION            */
+/* ======================================= */
+
+/* Menonaktifkan Animasi di Desktop/Tablet Lebar (opsional, jika ingin tetap statis) */
+@media (min-width: 1025px) {
+    /* Atur agar ketiga card terlihat di desktop tanpa gulir */
+    .team-scroll-container {
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+    }
+
+    .team-scroll-wrapper {
+        width: 100%;
+        animation: none !important; /* Hentikan animasi */
+        display: flex; 
+        justify-content: space-between;
+        gap: 30px;
+    }
+    
+    /* Sembunyikan set card duplikat */
+    .team-grid.team-row:nth-child(2) {
+        display: none;
+    }
+    
+    .team-grid.team-row:nth-child(1) {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .team-member-card {
+        min-width: 300px;
+        max-width: 300px;
+    }
+}
+
+
+/* Percepat animasi di Mobile agar guliran lebih dinamis */
+@media (max-width: 768px) {
+    .scroll-left-team {
+        animation-duration: 30s; /* Lebih cepat di mobile */
+    }
+    .team-member-card {
+        min-width: 260px;
+        max-width: 260px;
+        height: auto;
+    }
+}
+/* ======================================= */
+/* 8. TEAM SECTION (REVISI: HORIZONTAL SCROLL MANUAL) */
+/* ======================================= */
+
+/* Kontainer yang menyembunyikan konten di luar batas */
+.team-scroll-container {
+    overflow: hidden; 
+    padding: 20px 0;
+}
+
+/* Wrapper yang menampung kartu (1 set saja, loop dinonaktifkan) */
+.team-scroll-wrapper {
+    display: flex;
+    width: 100%; /* UBAH: Kembali ke 100% karena loop/duplikasi dinonaktifkan */
+    
+    /* ANIMASI DINONAKTIFKAN */
+    animation: none !important; 
+    
+    /* Tambahkan kemampuan scroll manual untuk memastikan panah JS berfungsi */
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.team-scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+/* Penerapan Animasi (Dinonaktifkan) */
+.scroll-left-team {
+    animation: none !important; /* Menonaktifkan animasi utama */
+}
+
+/* Mengatur tata letak setiap baris/kelompok card */
+.team-grid.team-row {
+    display: flex; 
+    flex-shrink: 0; 
+    gap: 30px; 
+    padding: 0 15px;
+    width: auto; /* UBAH: Lebar ditentukan oleh konten (kartu) */
+}
+
+/* Sembunyikan set card duplikat yang tidak diperlukan lagi */
+.team-grid.team-row:nth-child(2) {
+    display: none;
+}
+
+
+/* Styling Card Anggota Tim (TETAP SAMA) */
+.team-member-card {
+    background-color: var(--white-bg);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding-bottom: 20px;
+    overflow: hidden;
+    
+    min-width: 280px; 
+    max-width: 280px;
+    flex-shrink: 0; 
+}
+
+.team-member-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+
+/* ======================================= */
+/* 18. MEDIA QUERIES (RESPONSIVE DESIGN)   */
+/* ======================================= */
+
+/* DESKTOP (Menonaktifkan animasi team di layar lebar) */
+@media (min-width: 1025px) {
+    
+    /* UBAH: Tata letak untuk desktop/tablet lebar (Menampilkan 3 kartu) */
+    .team-scroll-container {
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+    }
+
+    .team-scroll-wrapper {
+        width: 100%;
+        animation: none !important; 
+        overflow-x: visible;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    /* Sembunyikan set card duplikat (Sudah diatur di atas, tapi diperkuat) */
+    .team-grid.team-row:nth-child(2) {
+        display: none;
+    }
+    
+    .team-grid.team-row:nth-child(1) {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+        flex-wrap: wrap; /* Izinkan wrap agar kartu bisa 100% jika sedikit */
+    }
+
+    .team-member-card {
+        min-width: 300px;
+        max-width: 300px;
+    }
+    
+    /* ... (Navigasi Panah Reviews tetap sama) ... */
+}
+
+
+/* MOBILE (Max 768px) */
+@media (max-width: 768px) {
+    /* UBAH: Hapus durasi animasi yang tidak terpakai */
+    /* .scroll-left-team {
+        animation-duration: 30s; 
+    } */
+    
+    .team-member-card {
+        min-width: 260px;
+        max-width: 260px;
+        height: auto;
+    }
+    /* ... (Media queries lainnya tetap sama) ... */
+}
+
+
+/* ======================================= */
+/* 20. HOMEPAGE TEAM NAVIGASI (Panah Manual) */
+/* ======================================= */
+
+/* Penempatan Tombol Navigasi di Homepage */
+.homepage-scroll-container {
+    position: relative;
+    overflow: hidden; 
+}
+
+/* Menggunakan styling nav-button yang sudah ada dari section reviews */
+.homepage-scroll-container .nav-button {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--white-bg);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.homepage-scroll-container .nav-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-bg);
+    border-color: var(--primary-color);
+}
+
+.team-nav-left {
+    left: 10px;
+}
+.team-nav-right {
+    right: 10px;
+}
+
+/* Sembunyikan Panah di Desktop (karena di desktop tampilan sudah rapi) */
+@media (min-width: 1025px) {
+    .homepage-scroll-container .nav-button {
+        display: none !important;
+    }
+}
+/* ======================================= */
+/* 21. STAF PENDUKUNG SECTION (INFORMASI-LENGKAP.HTML) */
+/* ======================================= */
+
+/* Container utama untuk positioning panah dan hiding overflow */
+.staff-scroll-container {
+    position: relative;
+    overflow: hidden; 
+}
+
+/* Wrapper yang membuat scroll horizontal bekerja di mobile */
+.staff-scroll-wrapper {
+    display: flex;
+    padding: 20px 0;
+    
+    /* Scroll Manual */
+    overflow-x: scroll; 
+    scroll-behavior: smooth;
+    
+    /* Sembunyikan Scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.staff-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Mengatur tata letak kartu di dalam wrapper */
+.staff-grid {
+    display: flex; 
+    gap: 30px; 
+    padding: 0 15px; 
+    flex-shrink: 0;
+}
+
+/* Styling Panah Navigasi */
+.staff-scroll-container .nav-button {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--white-bg);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.staff-nav-left {
+    left: 10px;
+}
+.staff-nav-right {
+    right: 10px;
+}
+
+
+/* RESPONSIF: Tampilan Desktop (Menampilkan Grid Normal) */
+@media (min-width: 1025px) {
+    /* Sembunyikan panah di desktop */
+    .staff-scroll-container .nav-button {
+        display: none !important;
+    }
+    
+    /* Nonaktifkan scroll horizontal di desktop */
+    .staff-scroll-container {
+        overflow: visible; 
+    }
+    .staff-scroll-wrapper {
+        overflow-x: visible; 
+        justify-content: center;
+        padding: 0;
+    }
+    
+    /* Mengubah grid menjadi wrapping centered */
+    .staff-grid {
+        width: 100%;
+        padding: 0;
+        gap: 30px;
+        flex-wrap: wrap; /* Izinkan kartu turun baris */
+        justify-content: center;
+    }
+}
+
+/* ======================================= */
+/* 22. BUKTI LEGALITAS & TESTIMONI SECTION */
+/* ======================================= */
+
+.legalitas-scroll-container {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.legalitas-scroll-wrapper {
+    display: flex;
+    /* Scroll Manual */
+    overflow-x: scroll; 
+    scroll-behavior: smooth;
+    
+    /* Sembunyikan Scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.legalitas-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.legalitas-grid {
+    display: flex; 
+    gap: 20px; /* Jarak antar item */
+    padding: 0 15px; 
+    flex-shrink: 0;
+    width: auto;
+}
+
+.legalitas-item {
+    background-color: var(--white-bg);
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    
+    /* Ukuran Kartu di Mobile */
+    min-width: 250px; 
+    max-width: 250px;
+    flex-shrink: 0; 
+}
+
+.legalitas-photo {
+    width: 100%;
+    height: 180px; /* Tinggi tetap agar tampilan seragam */
+    object-fit: cover;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.legalitas-photo:hover {
+    transform: scale(1.03);
+}
+
+.item-caption {
+    font-size: 0.9em;
+    color: var(--text-color-secondary);
+    font-weight: 500;
+}
+
+/* Styling Panah Navigasi */
+.legalitas-scroll-container .nav-button {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--white-bg);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.legalitas-nav-left { left: 10px; }
+.legalitas-nav-right { right: 10px; }
+
+/* RESPONSIF: Tampilan Desktop (Menampilkan Grid Normal) */
+@media (min-width: 1025px) {
+    /* Sembunyikan panah di desktop */
+    .legalitas-scroll-container .nav-button {
+        display: none !important;
+    }
+    
+    /* Nonaktifkan scroll horizontal di desktop dan ubah ke grid */
+    .legalitas-scroll-container {
+        overflow: visible; 
+        display: flex;
+        justify-content: center;
+    }
+    .legalitas-scroll-wrapper {
+        overflow-x: visible; 
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+    }
+    
+    /* Mengubah grid menjadi wrapping centered */
+    .legalitas-grid {
+        width: 100%;
+        padding: 0;
+        gap: 25px;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    
+    .legalitas-item {
+        min-width: 22%; /* Menampilkan 4 kartu per baris */
+        max-width: 22%;
+    }
+}
+
+/* ======================================= */
+/* KEYFRAMES UNTUK GULIR GALERI (LOOP) */
+/* ======================================= */
+@keyframes scrollGallery {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } 
+}
+
+
+/* ======================================= */
+/* 23. GALERI RUANGAN & PROMOSI SECTION */
+/* ======================================= */
+
+.gallery-scroll-container {
+    overflow: hidden; 
+    padding: 20px 0;
+}
+
+/* Wrapper yang menampung 2 set card (untuk looping) */
+.gallery-scroll-wrapper {
+    display: flex;
+    width: 200%; /* Wajib 200% untuk infinite loop */
+    animation-name: scrollGallery;
+    animation-duration: 45s; /* Kecepatan scroll: sesuaikan jika terlalu cepat/lambat */
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+}
+
+/* Mengatur tata letak setiap baris/kelompok card */
+.gallery-grid.gallery-row {
+    display: flex; 
+    flex-shrink: 0; 
+    gap: 20px; 
+    padding: 0 15px;
+    width: 50%; /* Wajib 50% karena ada 2 set di dalam 200% wrapper */
+}
+
+.gallery-item {
+    background-color: var(--white-bg);
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    padding-bottom: 10px;
+    text-align: center;
+    overflow: hidden;
+    
+    /* Ukuran Kartu (Mobile) */
+    min-width: 280px; 
+    max-width: 280px;
+    flex-shrink: 0; 
+    height: auto;
+}
+
+.gallery-photo {
+    width: 100%;
+    height: 180px; /* Tinggi tetap agar tampilan seragam */
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 10px;
+}
+
+/* Styling Indikator Titik (Menggunakan styling .indicator-dot yang sudah ada) */
+.gallery-indicator {
+    /* Hanya tampil di mobile/tablet */
+    display: none; 
+}
+@media (max-width: 1024px) {
+    .gallery-indicator {
+        display: block; 
+    }
+}
+
+
+/* RESPONSIF: Tampilan Desktop */
+@media (min-width: 1025px) {
+    .gallery-indicator {
+        display: none !important; /* Pastikan indikator hilang di desktop */
+    }
+    
+    .gallery-item {
+        min-width: 23%; /* Menampilkan 4 kartu per baris di desktop */
+        max-width: 23%;
+    }
+}
+
+
+/* MOBILE (Max 768px): Mempercepat animasi di layar kecil */
+@media (max-width: 768px) {
+    .gallery-scroll-wrapper {
+        animation-duration: 10s; /* Lebih cepat di mobile */
+    }
+}
+/* Styling Indikator Titik (Sudah ada di CSS awal Anda) */
+.indicator-dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.indicator-dot.active {
+    background-color: var(--primary-color);
+    width: 25px; 
+    border-radius: 5px;
+}
+
+/* Bagian 23. GALERI RUANGAN & PROMOSI SECTION */
+.gallery-indicator {
+    display: none; /* Sembunyikan secara default (desktop) */
+}
+
+/* MEDIA QUERY yang membuat titik muncul di mobile/tablet */
+@media (max-width: 1024px) {
+    .gallery-indicator {
+        display: block; /* Tampilkan di mobile */
+    }
+}
